@@ -45,15 +45,16 @@ class Levels {
       type: GameTypes.classic,
     ),
     Level(
-      //t1
+      //t4
       levelIndex: sayac.getIndex(),
       sizeX: 2,
-      sizeY: 3,
-      emojiAndAnswer: randomEmoji(randomSubListWithSize(6), 2, 3),
-      downSPEED: 20,
-      angleSPEED: 1,
+      sizeY: 2,
+      emojiAndAnswer: randomTapGame(randomSubListWithSize(4), 2, 2),
+      downSPEED: 0,
+      angleSPEED: 0,
       emojiSize: 32.0,
-      type: GameTypes.classic,
+      shiftMilisecond: 4000,
+      type: GameTypes.tapGame,
     ),
     Level(
       levelIndex: sayac.getIndex(),
@@ -64,6 +65,17 @@ class Levels {
       angleSPEED: 1,
       emojiSize: 32.0,
       type: GameTypes.splitGame,
+    ),
+    Level(
+      //t1
+      levelIndex: sayac.getIndex(),
+      sizeX: 2,
+      sizeY: 3,
+      emojiAndAnswer: randomEmoji(randomSubListWithSize(6), 2, 3),
+      downSPEED: 20,
+      angleSPEED: 1,
+      emojiSize: 32.0,
+      type: GameTypes.classic,
     ),
     Level(
       //t2
@@ -744,7 +756,7 @@ class Levels {
       emojiAndAnswer: randomEmoji(randomSubListWithSize(25), 5, 5),
       downSPEED: 20,
       angleSPEED: 3,
-      emojiSize: 32.0,
+      emojiSize: 24.0,
       type: GameTypes.classic,
       shiftMilisecond: 3000,
     ),
@@ -755,7 +767,7 @@ class Levels {
       emojiAndAnswer: randomEmoji(randomSubListWithSize(25), 4, 4),
       downSPEED: 30,
       angleSPEED: 3,
-      emojiSize: 32.0,
+      emojiSize: 26.0,
       type: GameTypes.classic,
       shiftMilisecond: 2000,
     ),
@@ -766,7 +778,7 @@ class Levels {
       emojiAndAnswer: randomSplitGame(randomSubListWithSize(25), 5, 5),
       downSPEED: 60,
       angleSPEED: 1,
-      emojiSize: 32.0,
+      emojiSize: 26.0,
       type: GameTypes.splitGame,
     ),
     Level(
@@ -776,7 +788,7 @@ class Levels {
       emojiAndAnswer: randomEmoji(randomSubListWithSize(25), 5, 5),
       downSPEED: 50,
       angleSPEED: 2,
-      emojiSize: 32.0,
+      emojiSize: 26.0,
       type: GameTypes.classic,
       shiftMilisecond: 1500,
     ),
@@ -839,7 +851,7 @@ class Levels {
       }
     }
 
-    debugPrint(cevaplarIndex.toString());
+    // debugPrint(cevaplarIndex.toString());
     // debugPrint(emojis.toString());
     return new EmojiAndAnswer(emoji: emojis, emojiAnswer: cevaplarIndex);
   }
